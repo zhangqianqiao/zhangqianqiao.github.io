@@ -106,7 +106,7 @@ work.display = function(element) {
 
     var workDescription = HTMLworkDescription.replace("%data%", element.description);
     $(".work-entry:last").append(workDescription);
-}
+};
 
 work.jobs.forEach(work.display)
 
@@ -131,7 +131,7 @@ project.display = function(element) {
   $(".project-entry:last").append(projectDescription);
   var projectPic = HTMLprojectImage.replace("%data%", element.images);
   $(".project-entry:last").append(projectPic);
-}
+};
 project.projects.forEach(project.display)
 
 var education = {
@@ -180,7 +180,7 @@ education.display = function() {
     $(".education-entry:last").append(schoolLocation);
     var schoolMajor = HTMLschoolMajor.replace("%data%", element.major);
     $(".education-entry:last").append(schoolMajor);
-  }
+  };
   education.schools.forEach(schoolAppend)
 
   $("#education").append(HTMLonlineClasses);
@@ -194,7 +194,7 @@ education.display = function() {
     $(".education-entry:last").append(onlineDates);
     var onlineURL =  HTMLonlineURL.replace("%data%", element.url);
     $(".education-entry:last").append(onlineURL)
-  }
+  };
   education.onlineSchools.forEach(onlineAppend)
 };
 education.display()
@@ -217,7 +217,7 @@ function initMap() {
     var location = {
       lat: placeData[1][0],
       lng: placeData[1][1]
-    }
+    };
     var marker = new google.maps.Marker({
       map: map,
       position: location
